@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F18CF29-F52A-47E3-9052-071115FA0514}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Launch_Control.My.MyApplication</StartupObject>
+    <RootNamespace>Launch_Control</RootNamespace>
+    <AssemblyName>Launch_Control</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Launch_Control.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Launch_Control.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\SDSU_LCS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoScaleButton">
+      <HintPath>..\..\Visual Studio 2013\dll\AutoScaleButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.BulletGraph.Windows, Version=13.4460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Chart.Base, Version=13.4460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Chart.Windows, Version=13.4460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Core, Version=13.4460.0.58, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Syncfusion\EssentialStudio\13.4.0.58\Config\Syncfusion.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Gauge.Windows, Version=13.4460.0.58, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Syncfusion\EssentialStudio\13.4.0.58\Windows\Gauge.Windows\Samples\RadialGauge\RadialGauge\CS\bin\Debug\Syncfusion.Gauge.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=13.4460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLCS.Designer.vb">
+      <DependentUpon>frmLCS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLCS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLCS.resx">
+      <DependentUpon>frmLCS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digital-7 %28italic%29.ttf" />
+    <None Include="Resources\digital-7 %28mono italic%29.ttf" />
+    <None Include="Resources\digital-7 %28mono%29.ttf" />
+    <None Include="Resources\digital-7.ttf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title_banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launch51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abort1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_on1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vents_opened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vents_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vents_opened1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vents_closed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_on2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safety.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safety_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safety_on1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safety_on2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safety_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caution_tape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_for_launch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_go_for_launch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\begin_sensors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recording.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reading_sensors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\he_pressure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kero_pressure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOX_pressure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kero_valve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOX_valve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main_valves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thermocouple_read.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwire1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thermocouple_read1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kero_valve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOX_valve1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main_valves1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_two_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_two_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_one_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignitor_one_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle_video_recording.png" />
+    <None Include="Resources\toggle_video_no_capture.png" />
+    <None Include="Resources\end_camera_button.png" />
+    <None Include="Resources\ignitor_on3.png" />
+    <None Include="Resources\ignitor_off2.png" />
+    <None Include="Resources\he_pressure1.png" />
+    <None Include="Resources\banner.png" />
+    <Content Include="Resources\SDSU_LCS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DLL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
