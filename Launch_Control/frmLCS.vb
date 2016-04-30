@@ -74,9 +74,9 @@ Public Class frmLCS
                     bConnected = False
                 Else
                     bConnected = True
-                    txtConsole.Text &= Environment.NewLine & "Connected to board at: " & ipAddress.ToString
+                    txtConsole.Text &= Environment.NewLine & "Connection established at Address: " & ipAddress.ToString & " on Port: " & txtPort.Text
                     dgvEvents.DataSource = dt
-                    dt.Rows.Add("Connected to board at: " & ipAddress.ToString, Date.Now)
+                    dt.Rows.Add("Connected to server.", Date.Now)
                     adjust_clm_width()
                     btnConnect.Enabled = False
                     txtIP.Enabled = False
@@ -105,6 +105,7 @@ Public Class frmLCS
     Private Sub btnDisconnect_Click(sender As Object, e As EventArgs) Handles btnDisconnect.Click
         If bConnected = True Then
             Try
+                Send_Rec_DGV("disconnect", dgvEvents, dt)
                 soc.Shutdown(SocketShutdown.Both)
                 Dim dis_result = soc.BeginDisconnect(True, Nothing, Nothing)
                 Dim dis_success = dis_result.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(3))
@@ -112,9 +113,8 @@ Public Class frmLCS
                     MsgBox("Client software was not able to disconnect successfully. Please try again.")
                 Else
                     bConnected = False
-                    txtConsole.Text &= Environment.NewLine & "Disconnected from board: " & txtIP.Text
+                    txtConsole.Text &= Environment.NewLine & "Disconnected from server."
                     dgvEvents.DataSource = dt
-                    dt.Rows.Add("Disconnected from board: " & txtIP.Text, Date.Now)
                     adjust_clm_width()
                     btnConnect.Enabled = True
                     btnDisconnect.Enabled = False
